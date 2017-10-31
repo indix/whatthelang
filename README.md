@@ -15,6 +15,14 @@ $ pip install cysignals==1.6.5
 $ pip install pyfasttext==0.4.3
 ```
 
+Install
+=======
+
+```
+$ pip install whatlang
+```
+
+
 Basic Usage
 ============
 
