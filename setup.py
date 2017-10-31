@@ -12,7 +12,7 @@ with open('LICENSE') as f:
 
 setup(
     name='whatlang',
-    version='1.0.1',
+    version='1.0.2',
     description='Lightning Fast Language Prediction powered by Fasttext.',
     long_description=readme,
     author='Krishna Sangeeth',

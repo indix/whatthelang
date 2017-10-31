@@ -3,5 +3,5 @@ include LICENSE
 include NOTICE
 include MANIFEST.in
 include requirements.txt
-include whatlang/model/
-recursive-include langdetect/profiles *
+recursive-include whatlang/model *
+
