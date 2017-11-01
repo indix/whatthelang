@@ -47,8 +47,8 @@ Batch Prediction is also supported
 ```
 
 
-Supported Language
-==================
+Supported Languages
+===================
 
 Supports 176 languages . The ISO codes for the corresponding languages are as below.
 
@@ -60,6 +60,20 @@ kn ko krc ku kv kw ky la lb lez li lmo lo lrc lt lv mai mg mhr min mk ml mn mr m
 mt mwl my myv mzn nah nap nds ne new nl nn no oc or os pa pam pfl pl pms pnb ps pt qu
 rm ro ru rue sa sah sc scn sco sd sh si sk sl so sq sr su sv sw ta te tg th tk tl tr
 tt tyv ug uk ur uz vec vep vi vls vo wa war wuu xal xmf yi yo yue zh
+```
+
+Model Training Details
+======================
+
+Quantized model built using Fasttext. More details present in the fasttext [blog](https://fasttext.cc/blog/2017/10/02/blog-post.html)
+
+Pushing to PyPi
+=================
+
+```
+$ python setup.py sdist
+$ python setup.py bdist_wheel --universal
+$ twine upload dist/*
 ```
 
 Reference
