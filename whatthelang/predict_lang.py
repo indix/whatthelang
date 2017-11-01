@@ -8,7 +8,7 @@ class WhatTheLang(object):
     def __init__(self):
         self.model_file = MODEL_FILE
         self.model = self.load_model()
-        self.unknown = "UNKNOWN_LANGUAGE"
+        self.unknown = "CANT_PREDICT"
 
     def load_model(self):
         return FastText(self.model_file)
@@ -18,10 +18,12 @@ class WhatTheLang(object):
         return txt
 
     def _flatten(self,pred):
-        return [item for sublist in pred for item in sublist]
+        return [item[0] if len(item)!=0 else self.unknown for item in pred]
+
 
     def _get_langs(self):
         return self.model.labels
+
 
     def predict_lang(self,inp):
         if type(inp) == str:
@@ -29,7 +31,7 @@ class WhatTheLang(object):
             if cleaned_txt == "":
                 raise ValueError("Not enough text to predict language")
             pred = self.model.predict([cleaned_txt])[0]
-            if len(pred[0]) == 0:
+            if len(pred) == 0:
                 return self.unknown
             return pred[0]
         else:

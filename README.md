@@ -30,17 +30,20 @@ Predicting Language using ``whatthelang``
 >>> wtl = WhatTheLang()
 >>> wtl.predict_lang("Mother")
 'en'
->>> wtl.predict_lang(u"தாய்")
+>>> wtl.predict_lang("தாய்")
 'ta'
->>> wtl.predict_lang(u"അമ്മ")
+>>> wtl.predict_lang("അമ്മ")
 'ml'
+>>> wtl.predict_lang("पिता")
+'hi'
+
 ```
 
 Batch Prediction is also supported
 
 ```python
->>>wl.predict_lang(["English sentence",u"അമ്മ"])
-['en','ml']
+>>>wtl.predict_lang(["അമ്മ","पिता","Teacher"])
+['ml','hi','en']
 ```
 
 

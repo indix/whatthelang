@@ -17,11 +17,19 @@ class WhatTheLangTest():
         assert pred == 'en'
 
     def test_batch(self):
-        pred = self.wtl.predict_lang(["English sentence",u"അമ്മ"])
+        pred = self.wtl.predict_lang(["English sentence","അമ്മ"])
         assert pred == ['en','ml']
 
     def test_num_langs(self):
         assert len(self.wtl._get_langs()) ==176
+
+    def test_unknown(self):
+        pred = self.wtl.predict_lang("asdfs")
+        assert pred == "CANT_PREDICT"
+
+    def test_batch_with_unknown(self):
+        pred = self.wtl.predict_lang(["English sentence", "അമ്മ","asdfs"])
+        assert pred == ['en', 'ml', "CANT_PREDICT"]
 
     def test_all(self):
 
@@ -29,8 +37,10 @@ class WhatTheLangTest():
         self.test_num_langs()
         self.test_english()
         self.test_batch()
+        self.test_unknown()
+        self.test_batch_with_unknown()
 
 
 if __name__ == "__main__":
     wtlt = WhatTheLangTest()
-    wlt.test_all()
+    wtlt.test_all()
