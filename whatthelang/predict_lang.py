@@ -4,7 +4,7 @@ import re
 
 MODEL_FILE = path.join(path.dirname(__file__), 'model', 'lid.176.ftz')
 
-class WhatLang(object):
+class WhatTheLang(object):
     def __init__(self):
         self.model_file = MODEL_FILE
         self.model = self.load_model()

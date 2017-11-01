@@ -1,27 +1,27 @@
 #coding=utf-8
 
-from predict_lang import WhatLang
+from predict_lang import WhatTheLang
 from os import path
 
-class WhatLangTest():
+class WhatTheLangTest():
 
     def __init__(self):
         self.model_file = path.join(path.dirname(__file__),'model','lid.176.ftz')
-        self.wl = WhatLang()
+        self.wtl = WhatTheLang()
 
     def test_model_present(self):
         assert path.isfile(self.model_file) == True
 
     def test_english(self):
-        pred = self.wl.predict_lang("This is an English sentence")
+        pred = self.wtl.predict_lang("This is an English sentence")
         assert pred == 'en'
 
     def test_batch(self):
-        pred = self.wl.predict_lang(["English sentence",u"അമ്മ"])
+        pred = self.wtl.predict_lang(["English sentence",u"അമ്മ"])
         assert pred == ['en','ml']
 
     def test_num_langs(self):
-        assert len(self.wl._get_langs()) ==176
+        assert len(self.wtl._get_langs()) ==176
 
     def test_all(self):
 
@@ -32,5 +32,5 @@ class WhatLangTest():
 
 
 if __name__ == "__main__":
-    wlt = WhatLangTest()
+    wtlt = WhatTheLangTest()
     wlt.test_all()

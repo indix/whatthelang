@@ -1,41 +1,38 @@
-whatlang
+whatthelang
 =========
 
-Lightning Fast Language Prediction :rocket:
+Lightning Fast Language Prediction 🚀
 
 Dependencies
 =============
 
-The below dependencies must be installed.
+The dependencies can be installed using the requirements.txt file:
 
 ```
-$ pip install future==0.16.0
-$ pip install Cython==0.27.2
-$ pip install cysignals==1.6.5
-$ pip install pyfasttext==0.4.3
+$ pip install -r requirements.txt
 ```
 
 Install
 =======
 
 ```
-$ pip install whatlang
+$ pip install whatthelang
 ```
 
 
 Basic Usage
 ============
 
-Predicting Language using ``whatlang``
+Predicting Language using ``whatthelang``
 
 ```python
->>> from whatlang import WhatLang
->>> wl = WhatLang()
->>> wl.predict_lang("Mother")
+>>> from whatthelang import WhatTheLang
+>>> wtl = WhatTheLang()
+>>> wtl.predict_lang("Mother")
 'en'
->>> wl.predict_lang(u"தாய்")
+>>> wtl.predict_lang(u"தாய்")
 'ta'
->>> wl.predict_lang(u"അമ്മ")
+>>> wtl.predict_lang(u"അമ്മ")
 'ml'
 ```
 
@@ -70,7 +67,7 @@ Quantized model built using Fasttext. More details present in the fasttext [blog
 Pushing to PyPi
 =================
 
-```
+```bash
 $ python setup.py sdist
 $ python setup.py bdist_wheel --universal
 $ twine upload dist/*
@@ -79,7 +76,7 @@ $ twine upload dist/*
 Reference
 ==========
 
-``whatlang`` is powered by ``FastText``
+``whatthelang`` is powered by ``FastText``
 
 ### Enriching Word Vectors with Subword Information
 
