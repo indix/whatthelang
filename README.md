@@ -42,7 +42,7 @@ Predicting Language using ``whatthelang``
 Batch Prediction is also supported
 
 ```python
->>>wtl.predict_lang(["അമ്മ","पिता","Teacher"])
+>>>wtl.predict_lang(["അമ്മ","पिता","teacher"])
 ['ml','hi','en']
 ```
 
