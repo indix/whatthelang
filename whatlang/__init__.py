@@ -1,1 +1,0 @@
-from .predict_lang import WhatLang

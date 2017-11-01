@@ -11,15 +11,15 @@ with open('LICENSE') as f:
 
 
 setup(
-    name='whatlang',
-    version='1.0.2',
+    name='whatthelang',
+    version='1.0.0',
     description='Lightning Fast Language Prediction powered by Fasttext.',
     long_description=readme,
     author='Krishna Sangeeth',
     author_email='kskrishnasangeeth@gmail.com',
-    url='https://github.com/whiletruelearn/whatlang',
+    url='https://github.com/indix/whatthelang',
     keywords='language detection library',
-    packages=['whatlang'],
+    packages=['whatthelang'],
     include_package_data=True,
     install_requires=['Cython','cysignals','pyfasttext'],
     license=license,
