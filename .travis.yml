@@ -1,0 +1,32 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "pypy"
+  - "pypy3"
+
+# Use container-based infrastructure
+sudo: false
+
+install:
+  - pip install .
+  - pip install -r requirements.txt
+
+
+script:
+  - python whatthelang/test_predict_lang.py
+
+
+after_script:
+ - pip install pep8 pyflakes
+ - pyflakes .| tee >(wc -l)
+ - pep8 --statistics --count .
+
+ deploy:
+  provider: pypi
+  user: "indix"
+  password:
+    secure: "RpG4xzViswPyfZa8Yz8fwIqQGSch+Z6QqjrwzfJJGPyCfgjq3IN7BKEJdl+CWrtK6ALjx8HFuP+n9LdCrUge8r1Bqc5ck2HcaY1d1rmsO/pkqTp9bKxymdg1piBGazCb0g0hkN74JT2/kXyP+w13VAKaxpYRbG"
