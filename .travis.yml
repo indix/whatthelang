@@ -16,7 +16,10 @@ install:
 script:
 - python whatthelang/test_predict_lang.py
 deploy:
-  provider: pypi
+- provider: pypi
+  on:
+    tags: true
+    python: 2.7
   user: indix
   password:
     secure: n7ogrl0fYyo1u3YfD45Y9LWgtpdi+NVQl4Wv60AP+ziTI42t+LSaOB6dAJVnSG/MxsE5rW+78ylkgOjvwEYknWoqURV7j7/OTie775tcjSgpw2pY79TW2P3qD7+h+6wyFXVWkPoBGQanWSXlQtcreaxIzWP1MPVq8/LJaL+i8MdTcpOQCAWyiJb0xIznlGQDFSgF4kx9pxaqJck77DCZW3+/LtUbw+d3+o+wBdwQfC71HvS/RTmtQXygskE3lqZFS0t8Cq38EvH5p5WsYu/XqescQzCKDUJmxBNCh8875cwcv3xCPMIQlYSzIPzVElDpDg4iAEfZkvnd37j7PbOhvaiLS1AKl3yl0UOghnz5m315/9c4/XNkGKOBarTHb6AiJJopP+zhKku0QbQ/NykXnGwt9RjNIYLWKDAMuNs8+uoFyrdLsMpHWtVt8KhL4QxELdO93hU8NiQwSmsimhpcC4/KMDg6gYeAl/hj72DCD8P1bKAszRWOTAJyurvBknpmCIGYwO+jxOh6Umu8mkmFmTBbYmdOKA4TIoZ8AVr+1/sk6DTCprbdvQPdArI67cjLhhvPuNWdIftVfUhM2Jpe2N0ksltFBRcVImxUMWNOBLsPzkzyISK9HuTcgv915MrJmjP6/anM/1tXCctYsPDtEbm3T7N79tk7q5EDdB/UMio=
