@@ -20,11 +20,6 @@ script:
   - python whatthelang/test_predict_lang.py
 
 
-after_script:
- - pip install pep8 pyflakes
- - pyflakes .| tee >(wc -l)
- - pep8 --statistics --count .
-
  deploy:
   provider: pypi
   user: "indix"
