@@ -20,7 +20,7 @@ script:
   - python whatthelang/test_predict_lang.py
 
 
- deploy:
+deploy:
   provider: pypi
   user: "indix"
   password:
