@@ -1,31 +1,22 @@
 language: python
-
 python:
-  - "2.7"
-
-# Use container-based infrastructure
+- '2.7'
 sudo: false
-
 before_install:
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get -y update
-  - sudo apt-get -y install build-essential
-  - sudo apt-get -y install g++-5
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 1
-  - g++ --version
-  - pip install Cython==0.27.2
-
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get -y update
+- sudo apt-get -y install build-essential
+- sudo apt-get -y install g++-5
+- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 1
+- g++ --version
+- pip install Cython==0.27.2
 install:
-  - pip install .
-  - pip install -r requirements.txt
-
-
+- pip install .
+- pip install -r requirements.txt
 script:
-  - python whatthelang/test_predict_lang.py
-
-
+- python whatthelang/test_predict_lang.py
 deploy:
   provider: pypi
-  user: "indix"
+  user: indix
   password:
-    secure: "RpG4xzViswPyfZa8Yz8fwIqQGSch+Z6QqjrwzfJJGPyCfgjq3IN7BKEJdl+CWrtK6ALjx8HFuP+n9LdCrUge8r1Bqc5ck2HcaY1d1rmsO/pkqTp9bKxymdg1piBGazCb0g0hkN74JT2/kXyP+w13VAKaxpYRbG"
+    secure: n7ogrl0fYyo1u3YfD45Y9LWgtpdi+NVQl4Wv60AP+ziTI42t+LSaOB6dAJVnSG/MxsE5rW+78ylkgOjvwEYknWoqURV7j7/OTie775tcjSgpw2pY79TW2P3qD7+h+6wyFXVWkPoBGQanWSXlQtcreaxIzWP1MPVq8/LJaL+i8MdTcpOQCAWyiJb0xIznlGQDFSgF4kx9pxaqJck77DCZW3+/LtUbw+d3+o+wBdwQfC71HvS/RTmtQXygskE3lqZFS0t8Cq38EvH5p5WsYu/XqescQzCKDUJmxBNCh8875cwcv3xCPMIQlYSzIPzVElDpDg4iAEfZkvnd37j7PbOhvaiLS1AKl3yl0UOghnz5m315/9c4/XNkGKOBarTHb6AiJJopP+zhKku0QbQ/NykXnGwt9RjNIYLWKDAMuNs8+uoFyrdLsMpHWtVt8KhL4QxELdO93hU8NiQwSmsimhpcC4/KMDg6gYeAl/hj72DCD8P1bKAszRWOTAJyurvBknpmCIGYwO+jxOh6Umu8mkmFmTBbYmdOKA4TIoZ8AVr+1/sk6DTCprbdvQPdArI67cjLhhvPuNWdIftVfUhM2Jpe2N0ksltFBRcVImxUMWNOBLsPzkzyISK9HuTcgv915MrJmjP6/anM/1tXCctYsPDtEbm3T7N79tk7q5EDdB/UMio=
