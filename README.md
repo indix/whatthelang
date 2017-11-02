@@ -1,28 +1,26 @@
-whatthelang
-=========
+# whatthelang
+
 [![Build Status](https://travis-ci.org/indix/whatthelang.svg?branch=master)](https://travis-ci.org/indix/whatthelang) [![PyPI](https://img.shields.io/pypi/v/whatthelang.svg)](https://pypi.python.org/pypi/whatthelang)
 
 Lightning Fast Language Prediction 🚀
 
-Dependencies
-=============
+## Dependencies
 
 The dependencies can be installed using the requirements.txt file:
 
-```
+```bash
 $ pip install -r requirements.txt
 ```
 
-Install
-=======
+## Install
 
-```
+
+```bash
 $ pip install whatthelang
 ```
 
 
-Basic Usage
-============
+## Basic Usage
 
 Predicting Language using ``whatthelang``
 
@@ -48,8 +46,7 @@ Batch Prediction is also supported
 ```
 
 
-Supported Languages
-===================
+## Supported Languages
 
 Supports 176 languages . The ISO codes for the corresponding languages are as below.
 
@@ -63,22 +60,12 @@ rm ro ru rue sa sah sc scn sco sd sh si sk sl so sq sr su sv sw ta te tg th tk t
 tt tyv ug uk ur uz vec vep vi vls vo wa war wuu xal xmf yi yo yue zh
 ```
 
-Model Training Details
-======================
+## Model Training Details
 
 Quantized model built using Fasttext. More details present in the fasttext [blog](https://fasttext.cc/blog/2017/10/02/blog-post.html)
 
-Pushing to PyPi
-=================
+## Reference
 
-```bash
-$ python setup.py sdist
-$ python setup.py bdist_wheel --universal
-$ twine upload dist/*
-```
-
-Reference
-==========
 
 ``whatthelang`` is powered by ``FastText``
 
