@@ -13,6 +13,7 @@ before_install:
   - sudo apt-get -y install g++-5
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 1
   - g++ --version
+  - pip install Cython==0.27.2
 
 install:
   - pip install .
