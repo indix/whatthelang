@@ -7,7 +7,7 @@ python:
 sudo: false
 
 before_install:
-  - sudo apt-get -y install g++-5
+  - sudo apt-get -y install g++
   - g++ --version
 
 install:
