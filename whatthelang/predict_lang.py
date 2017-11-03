@@ -26,7 +26,7 @@ class WhatTheLang(object):
 
 
     def predict_lang(self,inp):
-        if type(inp) == str:
+        if type(inp) in [str,unicode]:
             cleaned_txt = self._clean_up(inp)
             if cleaned_txt == "":
                 raise ValueError("Not enough text to predict language")
