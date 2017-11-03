@@ -1,6 +1,5 @@
 from pyfasttext import FastText
 from os import path
-from __future__ import unicode_literals
 import re
 
 MODEL_FILE = path.join(path.dirname(__file__), 'model', 'lid.176.ftz')
@@ -41,7 +40,7 @@ class WhatTheLang(object):
 
 
     def pred_prob(self,inp):
-        if type(inp) == str:
+        if type(inp) != list:
             inp = self._clean_up(inp)
             return self.model.predict_proba([inp])
         return self.model.predict_proba(inp)
