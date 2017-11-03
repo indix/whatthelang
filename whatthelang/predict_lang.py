@@ -1,5 +1,6 @@
 from pyfasttext import FastText
 from os import path
+from __future__ import unicode_literals
 import re
 
 MODEL_FILE = path.join(path.dirname(__file__), 'model', 'lid.176.ftz')
@@ -26,7 +27,7 @@ class WhatTheLang(object):
 
 
     def predict_lang(self,inp):
-        if type(inp) in [str,unicode]:
+        if type(inp) != list:
             cleaned_txt = self._clean_up(inp)
             if cleaned_txt == "":
                 raise ValueError("Not enough text to predict language")
