@@ -31,6 +31,10 @@ class WhatTheLangTest():
         pred = self.wtl.predict_lang(["English sentence", "അമ്മ","asdfs"])
         assert pred == ['en', 'ml', "CANT_PREDICT"]
 
+    def test_unicode_input(self):
+        pred = self.wtl.predict_lang(u"nike running shoes")
+        assert pred == 'en'
+
     def test_all(self):
 
         self.test_model_present()
@@ -39,7 +43,7 @@ class WhatTheLangTest():
         self.test_batch()
         self.test_unknown()
         self.test_batch_with_unknown()
-
+        self.test_unicode_input()
 
 if __name__ == "__main__":
     wtlt = WhatTheLangTest()

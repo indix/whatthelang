@@ -26,7 +26,7 @@ class WhatTheLang(object):
 
 
     def predict_lang(self,inp):
-        if type(inp) == str:
+        if type(inp) != list:
             cleaned_txt = self._clean_up(inp)
             if cleaned_txt == "":
                 raise ValueError("Not enough text to predict language")
@@ -40,7 +40,7 @@ class WhatTheLang(object):
 
 
     def pred_prob(self,inp):
-        if type(inp) == str:
+        if type(inp) != list:
             inp = self._clean_up(inp)
             return self.model.predict_proba([inp])
         return self.model.predict_proba(inp)
