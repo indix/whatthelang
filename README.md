@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/indix/whatthelang.svg?branch=master)](https://travis-ci.org/indix/whatthelang) [![PyPI](https://img.shields.io/pypi/v/whatthelang.svg)](https://pypi.python.org/pypi/whatthelang)
 
-Lightning Fast Language Prediction 🚀
+Lightning Fast Language Prediction using Fasttext[1] 🚀
 
 ## Dependencies
 
