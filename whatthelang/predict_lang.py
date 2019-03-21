@@ -1,6 +1,6 @@
 from pyfasttext import FastText
 from os import path
-import re
+import regex as re
 
 MODEL_FILE = path.join(path.dirname(__file__), 'model', 'lid.176.ftz')
 
@@ -14,7 +14,7 @@ class WhatTheLang(object):
         return FastText(self.model_file)
 
     def _clean_up(self,txt):
-        txt = re.sub(r"\b\d+\b", "", txt)
+        txt = re.sub(r'(\b\d+\b|\p{P}|\n)', '', txt)
         return txt
 
     def _flatten(self,pred):
