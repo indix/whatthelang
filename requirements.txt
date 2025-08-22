@@ -1,4 +1,4 @@
-future==0.16.0
+future==1.0.0
 Cython==0.27.2
 cysignals==1.6.5
 pyfasttext==0.4.3
